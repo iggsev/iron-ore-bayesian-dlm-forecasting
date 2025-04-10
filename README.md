@@ -100,8 +100,7 @@ The model estimates the level component and regression coefficients while predic
    - Seaborn (`pip install seaborn`)
 
 2. **Steps:**
-   - Place the data files in `iron-data/`.
-   - Run the script: `python iron_ore_forecast.py`.
+   - Run the script: `python iron_ore_bayes_ts.py`.
 
 ## Results and Visualizations
 
