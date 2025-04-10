@@ -77,14 +77,14 @@ generated quantities {
 
 ### Mathematical Formulation
 - **Observation Equation:**  
-  $y_t = \text{level}_t + \beta_{\text{demand}} \cdot x_{\text{demand}, t} + \beta_{\text{supply}} \cdot x_{\text{supply}, t} + \epsilon_t, \quad \epsilon_t \sim \mathcal{N}(0, \sigma_{\text{obs}}^2)$
+  ![equation](https://latex.codecogs.com/png.latex?y_t%20%3D%20%5Ctext%7Blevel%7D_t%20&plus;%20%5Cbeta_%7B%5Ctext%7Bdemand%7D%7D%20%5Ccdot%20x_%7B%5Ctext%7Bdemand%7D%2C%20t%7D%20&plus;%20%5Cbeta_%7B%5Ctext%7Bsupply%7D%7D%20%5Ccdot%20x_%7B%5Ctext%7Bsupply%7D%2C%20t%7D%20&plus;%20%5Cepsilon_t%2C%20%5Cquad%20%5Cepsilon_t%20%5Csim%20%5Cmathcal%7BN%7D%280%2C%20%5Csigma_%7B%5Ctext%7Bobs%7D%7D%5E2%29)
   
 - **State Evolution:**  
-  $\text{level}_t = \text{level}_{t-1} + \eta_t, \quad \eta_t \sim \mathcal{N}(0, \sigma_{\text{level}}^2)$
+  ![equation](https://latex.codecogs.com/png.latex?%5Ctext%7Blevel%7D_t%20%3D%20%5Ctext%7Blevel%7D_%7Bt-1%7D%20&plus;%20%5Ceta_t%2C%20%5Cquad%20%5Ceta_t%20%5Csim%20%5Cmathcal%7BN%7D%280%2C%20%5Csigma_%7B%5Ctext%7Blevel%7D%7D%5E2%29)
   
 - **Constraints:**  
-  - $\beta_{\text{demand}} > 0$ (enforced via `exp()`)
-  - $\beta_{\text{supply}} < 0$ (enforced via `-exp()`)
+  - ![equation](https://latex.codecogs.com/png.latex?%5Cbeta_%7B%5Ctext%7Bdemand%7D%7D%20%3E%200) (enforced via `exp()`)
+  - ![equation](https://latex.codecogs.com/png.latex?%5Cbeta_%7B%5Ctext%7Bsupply%7D%7D%20%3C%200) (enforced via `-exp()`)
 
 The model estimates the level component and regression coefficients while predicting future prices.
 
@@ -151,6 +151,10 @@ The model includes time series cross-validation to assess its predictive perform
 - **Demand Effect:** Positive, indicating higher steel production increases prices.
 - **Supply Effect:** Negative, showing higher inventory reduces prices.
 - **Accuracy:** MAPE provides insight into model performance, with cross-validation assessing forecast reliability over different horizons.
+
+## Contributing
+
+Feel free to fork this repository, submit issues, or contribute improvements via pull requests!
 
 ## License
 
